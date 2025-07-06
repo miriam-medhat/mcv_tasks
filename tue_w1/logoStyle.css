@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.logo {
+    color: aliceblue;
+    width: fit-content;
+    padding: 10px 50px 10px 50px;
+    position: absolute;
+    top: 250px;
+    left: 230px;
+    border-style: solid;
+    border-color: aliceblue;
+    border-radius: 15px;
+}
+
+.slice {
+    color: aliceblue;
+    background-color: black;
+    width:fit-content;
+    padding: 10px 20px 10px 20px;
+    position: absolute;
+    top: 320px;
+    left: 325px;
+    
+}
