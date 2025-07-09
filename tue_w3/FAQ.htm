@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ with Toggle Icon</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .faq-container {
+      max-width: 600px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .faq-item {
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .toggle-icon {
+      font-size: 22px;
+      color: #555;
+      margin-left: 10px;
+    }
+
+    .faq-answer {
+      margin-top: 10px;
+      border-radius: 8px;
+      padding: 10px;
+      color: #333;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>FAQs</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">
+        What is your return policy?
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="faq-answer">Our return policy lasts 30 days with a full refund.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How do I track my order?
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="faq-answer">You can track your order using the tracking number sent to your email.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Can I cancel my subscription?
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="faq-answer">Yes, you can cancel anytime from your account settings.</div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('.faq-question').click(function () {
+        const answer = $(this).next('.faq-answer');
+        const icon = $(this).find('.toggle-icon');
+
+        // Toggle answer
+        answer.slideToggle(200);
+
+        // Toggle + and -
+        icon.text(icon.text() === '+' ? '−' : '+');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
